@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake News Detector by Jeff Chuks</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 40px; background: #f8f8f8; }
+        h1 { color: #333; }
+        textarea { width: 100%; height: 150px; margin-top: 10px; }
+        button { padding: 10px 20px; margin-top: 20px; }
+        .result { margin-top: 30px; font-size: 24px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Jeff Chuks' Fake News Detector</h1>
+    <form method="post">
+        <label for="news">Enter a news article or headline:</label><br>
+        <textarea name="news" required></textarea><br>
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction %}
+    <div class="result">{{ prediction }}</div>
+    {% endif %}
+    <footer style="margin-top: 30px; text-align: center; font-size: 0.9em; color: gray;">
+    Built by Jeff Chukwudi Njoku · Fake News Detector AI
+</footer>
+</body>
+</html>
